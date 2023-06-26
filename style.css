@@ -2,23 +2,30 @@
   margin: 10px;
   padding: 0;
 }
-
+h5{
+  text-align: center;
+}
 body {
   display: flex;
   justify-content: center;
   font-family: system-ui;
   color: rgb(73, 73, 73);
   background: rgb(111,107,184);
-background: linear-gradient(90deg, rgb(194, 192, 233) 0%, rgb(123, 123, 233) 50%, rgb(158, 186, 235) 100%);
+  background: linear-gradient(90deg, rgb(174, 173, 182) 0%, rgb(206, 206, 216) 50%, rgb(159, 161, 163) 100%);
   min-height: 444px;
   min-width: 660px;
 }
-
+.range-filter{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-left: -5px;
+}
 section {
   display: flex;
   justify-content: center;
   align-items: center;
-  min-width: 400px;
+  min-width: 500px;
 }
 .btn {
   border: none;
@@ -44,7 +51,7 @@ input {
   margin: 25px;
   border: 2px solid white;
   border-radius: 5px;
-  background-color: rgb(4, 130, 214);
+  background-color: rgb(94, 109, 121);
 }
 .prazdnik {
  width: 100%;
@@ -55,11 +62,11 @@ input {
   justify-content: center;
   flex-direction: column;
   background: rgb(111,107,184);
-background: linear-gradient(90deg, rgb(112, 47, 153) 0%, rgb(99, 99, 197) 50%, rgb(26, 57, 112) 100%);
+  background: linear-gradient(90deg, rgb(163, 149, 172) 0%, rgb(144, 144, 160) 50%, rgb(138, 152, 177) 100%);
   border-radius: 10px;
   border: 2px solid rgb(252, 252, 252);
   width: 800px;
-  height: 400px;
+  height: 600px;
   opacity: 80%;
 }
 .dblock1{
@@ -73,7 +80,7 @@ background: linear-gradient(90deg, rgb(112, 47, 153) 0%, rgb(99, 99, 197) 50%, r
 .btn-primary{
   border-radius: 5px;
   border: 8px solid rgb(252, 252, 252);
-  background-color: blueviolet;
+  background-color: rgb(114, 107, 121);
   color: white;
 }
 .btn-primary:hover{
@@ -87,8 +94,74 @@ input:hover{
   opacity: 50%;
 }
 label{
-  color: white;
+  color: rgb(0, 0, 0);
 }
 .bot{
   margin-top: 25px;
 }
+/* head */
+.webmadewell {
+  background-color: white;
+}
+body {
+  margin: 0;
+  min-width: 200px;
+}
+.sample-header {
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 100%;
+  background-image: url("http://webmadewell.com/wp-content/uploads/2018/01/img-bg-sample-parallax-header.jpg");
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.sample-header-section {
+  position: relative;
+  padding: 15% 0 10%;
+  max-width: 640px;
+  margin-left: auto;
+  margin-right: auto;
+  color: white;
+  text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.5);
+  font-family: "Montserrat", sans-serif;
+}
+/* ползунок */
+.range-input {
+  position: relative;
+}
+.range-input input {
+  position: absolute;
+  width: 100%;
+  height: 5px;
+  top: -5px;
+  background: none;
+  pointer-events: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+}
+input[type="range"]::-webkit-slider-thumb {
+  height: 17px;
+  width: 17px;
+  border-radius: 50%;
+  background: #1F5785;
+  pointer-events: auto;
+  -webkit-appearance: none;
+  box-shadow: 0 0 6px rgba(12, 9, 9, 0.05);
+}
+input[type="range"]::-moz-range-thumb {
+  height: 17px;
+  width: 17px;
+  border: none;
+  border-radius: 50%;
+  background: #5a3636;
+  pointer-events: auto;
+  -moz-appearance: none;
+  box-shadow: 0 0 6px rgba(80, 38, 38, 0.05);
+}
+ 
+
+
+

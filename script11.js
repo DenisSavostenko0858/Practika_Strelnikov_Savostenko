@@ -21,6 +21,8 @@ function getValue(array) {
     }
   }
   console.log(array);
+  const blokgotovy = Object.values(array)
+  document.getElementById("bloki").innerHTML = blokgotovy.brand;
 }
 // Обращаемся к базе данных через fetch и .then
 const krData = function (brand_item, type_item) {

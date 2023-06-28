@@ -21,7 +21,7 @@ function getValue(array) {
     }
   }
   console.log(array[0]);
-  document.getElementById("blokip").innerHTML = array[0].brand + "<br />"+array[0].name + "<br />"+array[0].price + "<br />"+array[0].image_link + "<br />"+array[0].product_link +  "<br />"+ "<br />"+ "<br />"+ "<br />"+ array[1].brand + "<br />"+array[1].name + "<br />"+array[1].price + "<br />"+array[1].image_link + "<br />"+array[1].product_link +  "<br />"+ "<br />"+ "<br />"+ "<br />"+ array[2].brand + "<br />"+array[2].name + "<br />"+array[2].price + "<br />"+array[2].image_link + "<br />"+array[2].product_link;
+  document.getElementById("blokip").innerHTML = array[0].brand + "<br />"+array[0].name + "<br />"+ "Цена: " +array[0].price +"$"+ "<br />"+"Photo:"+"<br />"+array[0].image_link + "<br />"+"<a href='"+array[0].product_link+"'>Cсылка на магазин</a>" +  "<br />"+ "<br />"+ "<br />"+ array[1].brand + "<br />"+array[1].name + "<br />"+"Цена: "+array[1].price + "$"+"<br />"+"Photo:"+"<br />"+array[1].image_link + "<br />"+"<a href='"+array[1].product_link+"'>Cсылка на магазин</a>"+ "<br />"+ "<br />"+ "<br />"+ array[2].brand + "<br />"+array[2].name + "<br />"+"Цена: "+array[2].price +"$" + "<br />"+"Photo:"+"<br />"+array[2].image_link + "<br />"+"<a href='"+array[2].product_link+"'>Cсылка на магазин</a>";
 }
 // Обращаемся к базе данных через fetch и .then
 const krData = function (brand_item, type_item) {

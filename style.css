@@ -25,7 +25,7 @@ section {
   display: flex;
   justify-content: center;
   align-items: center;
-  min-width: 500px;
+  /* min-width: 500px; */
 }
 .btn {
   border: none;
@@ -65,8 +65,8 @@ input {
   background: linear-gradient(90deg, rgb(163, 149, 172) 0%, rgb(144, 144, 160) 50%, rgb(138, 152, 177) 100%);
   border-radius: 10px;
   border: 2px solid rgb(252, 252, 252);
-  width: 800px;
-  height: 600px;
+  /* width: 800px;
+  height: 600px; */
   opacity: 80%;
 }
 .dblock1{
@@ -162,7 +162,16 @@ input[type="range"]::-moz-range-thumb {
   -moz-appearance: none;
   box-shadow: 0 0 6px rgba(80, 38, 38, 0.05);
 }
- 
+#bloki{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  background: rgb(111,107,184);
+  background: linear-gradient(90deg, rgb(163, 149, 172) 0%, rgb(144, 144, 160) 50%, rgb(138, 152, 177) 100%);
+  border: 2px solid rgb(252, 252, 252);
+  border-radius: 10px;
+} 
 
 
 

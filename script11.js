@@ -1,6 +1,6 @@
 const brand_item = document.getElementById("marka").value;
 const type_item = document.getElementById("product").value;
-console.log(brand_item, type_item);
+console.log(brand_item, type_item, );
 
 // Вынимаем https ссылку строки
 function getValue(array) {
@@ -20,9 +20,8 @@ function getValue(array) {
       return Number(a.price) < Number(b.price) ? -1 : 1; //Цена по возрастанию
     }
   }
-  console.log(array);
-  const blokgotovy = Object.values(array)
-  document.getElementById("bloki").innerHTML = blokgotovy.brand;
+  console.log(array[0]);
+  document.getElementById("blokip").innerHTML = array[0].brand + "<br />"+array[0].name + "<br />"+array[0].price + "<br />"+array[0].image_link + "<br />"+array[0].product_link +  "<br />"+ "<br />"+ "<br />"+ "<br />"+ array[1].brand + "<br />"+array[1].name + "<br />"+array[1].price + "<br />"+array[1].image_link + "<br />"+array[1].product_link +  "<br />"+ "<br />"+ "<br />"+ "<br />"+ array[2].brand + "<br />"+array[2].name + "<br />"+array[2].price + "<br />"+array[2].image_link + "<br />"+array[2].product_link;
 }
 // Обращаемся к базе данных через fetch и .then
 const krData = function (brand_item, type_item) {
@@ -39,6 +38,7 @@ const krData = function (brand_item, type_item) {
     .then(function (data) {
       getValue(data);
     });
+     document.getElementById("blokih").innerHTML = brand_item + " " + type_item;
 };
 // head
 function parallax_height() {
@@ -58,44 +58,44 @@ $(window).resize(function() {
 
 // ползун
  
-const rangeInput = document.querySelectorAll(".range-input input"),
-  priceInput = document.querySelectorAll(".price-input input"),
-  range = document.querySelector(".slider .progress");
-let priceGap = 1000;
+// const rangeInput = document.querySelectorAll(".range-input input"),
+//   priceInput = document.querySelectorAll(".price-input input"),
+//   range = document.querySelector(".slider .progress");
+// let priceGap = 1000;
  
-priceInput.forEach((input) => {
-  input.addEventListener("input", (e) => {
-    let minPrice = parseInt(priceInput[0].value),
-      maxPrice = parseInt(priceInput[1].value);
+// priceInput.forEach((input) => {
+//   input.addEventListener("input", (e) => {
+//     let minPrice = parseInt(priceInput[0].value),
+//       maxPrice = parseInt(priceInput[1].value);
  
-    if (maxPrice - minPrice >= priceGap && maxPrice <= rangeInput[1].max) {
-      if (e.target.className === "input-min") {
-        rangeInput[0].value = minPrice;
-        range.style.left = (minPrice / rangeInput[0].max) * 100 + "%";
-      } else {
-        rangeInput[1].value = maxPrice;
-        range.style.right = 100 - (maxPrice / rangeInput[1].max) * 100 + "%";
-      }
-    }
-  });
-});
+//     if (maxPrice - minPrice >= priceGap && maxPrice <= rangeInput[1].max) {
+//       if (e.target.className === "input-min") {
+//         rangeInput[0].value = minPrice;
+//         range.style.left = (minPrice / rangeInput[0].max) * 100 + "%";
+//       } else {
+//         rangeInput[1].value = maxPrice;
+//         range.style.right = 100 - (maxPrice / rangeInput[1].max) * 100 + "%";
+//       }
+//     }
+//   });
+// });
  
-rangeInput.forEach((input) => {
-  input.addEventListener("input", (e) => {
-    let minVal = parseInt(rangeInput[0].value),
-      maxVal = parseInt(rangeInput[1].value);
+// rangeInput.forEach((input) => {
+//   input.addEventListener("input", (e) => {
+//     let minVal = parseInt(rangeInput[0].value),
+//       maxVal = parseInt(rangeInput[1].value);
  
-    if (maxVal - minVal < priceGap) {
-      if (e.target.className === "range-min") {
-        rangeInput[0].value = maxVal - priceGap;
-      } else {
-        rangeInput[1].value = minVal + priceGap;
-      }
-    } else {
-      priceInput[0].value = minVal;
-      priceInput[1].value = maxVal;
-      range.style.left = (minVal / rangeInput[0].max) * 100 + "%";
-      range.style.right = 100 - (maxVal / rangeInput[1].max) * 100 + "%";
-    }
-  });
-});
+//     if (maxVal - minVal < priceGap) {
+//       if (e.target.className === "range-min") {
+//         rangeInput[0].value = maxVal - priceGap;
+//       } else {
+//         rangeInput[1].value = minVal + priceGap;
+//       }
+//     } else {
+//       priceInput[0].value = minVal;
+//       priceInput[1].value = maxVal;
+//       range.style.left = (minVal / rangeInput[0].max) * 100 + "%";
+//       range.style.right = 100 - (maxVal / rangeInput[1].max) * 100 + "%";
+//     }
+//   });
+// });

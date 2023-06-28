@@ -13,11 +13,11 @@ function getValue(array) {
   //   }
   // }
   console.log(array);
-
   function cheakboks() {
     const check = document.getElementById("myCheck").checked;
     const box = document.getElementById("myCheck")
     if (check == true){
+      array.sort(sortFunction);
       function sortFunction(a, b) {
         if (Number(a.price) === Number(b.price)) {
           return 0;

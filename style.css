@@ -65,8 +65,8 @@ input {
   background: linear-gradient(90deg, rgb(163, 149, 172) 0%, rgb(144, 144, 160) 50%, rgb(138, 152, 177) 100%);
   border-radius: 10px;
   border: 2px solid rgb(252, 252, 252);
-  /* width: 800px;
-  height: 600px; */
+   width: 900px;
+  /* height: 600px; */
   opacity: 80%;
 }
 .dblock1{

@@ -4,14 +4,6 @@ console.log(brand_item, type_item, );
 
 // Вынимаем https ссылку строки
 function getValue(array) {
-  // array.sort(sortFunction);
-  // function sortFunction(a, b) {
-  //   if (a.name === b.name) {
-  //     return 0;
-  //   } else {
-  //     return a.name < b.name ? -1 : 1;// от а до я 
-  //   }
-  // }
   console.log(array);
   function cheakboks() {
     const check = document.getElementById("myCheck").checked;
@@ -28,7 +20,7 @@ function getValue(array) {
     }
 }
   console.log(array[0]);
-  document.getElementById("blokip").innerHTML = array[0].brand + "<br />"+array[0].name + "<br />"+ "Цена: " +array[0].price +"$"+ "<br />"+"Photo:"+"<br />"+array[0].image_link + "<br />"+"<a href='"+array[0].product_link+"'>Cсылка на магазин</a>" +  "<br />"+ "<br />"+ "<br />"+ array[1].brand + "<br />"+array[1].name + "<br />"+"Цена: "+array[1].price + "$"+"<br />"+"Photo:"+"<br />"+array[1].image_link + "<br />"+"<a href='"+array[1].product_link+"'>Cсылка на магазин</a>"+ "<br />"+ "<br />"+ "<br />"+ array[2].brand + "<br />"+array[2].name + "<br />"+"Цена: "+array[2].price +"$" + "<br />"+"Photo:"+"<br />"+array[2].image_link + "<br />"+"<a href='"+array[2].product_link+"'>Cсылка на магазин</a>";
+  document.getElementById("blokip").innerHTML = array[0].brand + "<br />"+array[0].name + "<br />"+ "Цена: " +array[0].price +"$"+ "<br />"+"Photo:"+"<br />"+"<img src=' +array[0].image_link+\' wight=\'200px\' height=\'200px\'>" + "<br />"+"<a href='"+array[0].product_link+"'>Cсылка на магазин</a>" +  "<br />"+ "<br />"+ "<br />"+ array[1].brand + "<br />"+array[1].name + "<br />"+"Цена: "+array[1].price + "$"+"<br />"+"Photo:"+"<br />"+"<img src=' +array[1].image_link+\' wight=\'200px\' height=\'200px\'>" + "<br />"+"<a href='"+array[1].product_link+"'>Cсылка на магазин</a>"+ "<br />"+ "<br />"+ "<br />"+ array[2].brand + "<br />"+array[2].name + "<br />"+"Цена: "+array[2].price +"$" + "<br />"+"Photo:"+"<br />"+"<img src=' +array[2].image_link+\' wight=\'200px\' height=\'200px\'>" + "<br />"+"<a href='"+array[2].product_link+"'>Cсылка на магазин</a>";
 }
 // Обращаемся к базе данных через fetch и .then
 const krData = function (brand_item, type_item) {
